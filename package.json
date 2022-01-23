@@ -1,0 +1,22 @@
+{
+  "name": "patou",
+  "version": "1.0.0-r2",
+  "description": "A Bot For Everyone",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandreSama/Patou.git"
+  },
+  "author": "Alexandre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexandreSama/Patou/issues"
+  },
+  "homepage": "https://github.com/AlexandreSama/Patou#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
