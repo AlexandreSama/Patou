@@ -13,8 +13,8 @@ module.exports = class GotoClient extends AkairoClient {
                 presence: {
                     status: 'dnd',
                     activities: [{
-                        name: 'Working on some stuff',
-                        type: 'WATCHING',
+                        name: 'some stuff',
+                        type: 'STREAMING',
                         url: 'https://github.com/AlexandreSama/Patou'
                     }]
                 },
