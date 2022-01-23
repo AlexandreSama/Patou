@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AlexandreSama/Patou#readme",
   "dependencies": {
-    "discord.js": "^13.6.0"
+    "discord.js": "^13.6.0",
+    "discord-akairo": "github:Tricked-dev/discord-akairo"
   }
 }
