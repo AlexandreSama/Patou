@@ -9,7 +9,7 @@ class ReadyListener extends Listener{
         });
     }
 
-    exec(){
+    exec(client){
         const listeners = functions.getAllListeners('./src/listeners/')
         const commands = functions.getAllCommands('./src/commands/')
         console.log("Démarrage......")
