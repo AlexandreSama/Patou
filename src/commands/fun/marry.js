@@ -3,6 +3,12 @@ class marryCommand extends Command {
     constructor() {
         super('marry', {
             aliases: ['marry'],
+            category: 'Fun',
+            description: {
+                content: "La commande marry permet de se marier avec quelqu'un (On se retrouve au divorce)",
+                usage: 'marry <membre>',
+                examples: ['marry @Patou']
+            }
         });
     }
 

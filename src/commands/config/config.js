@@ -7,6 +7,12 @@ class ConfigCommand extends Command{
         super('config', {
             aliases: ['configuration', 'config'],
             userPermissions: "ADMINISTRATOR",
+            category: 'Configuration',
+            description: {
+                content: "La commande configuration permet de me configurer afin que je puisse pleinement fonctionner !",
+                usage: 'configuration',
+                examples: ['configuration']
+            }
         })
     }
 

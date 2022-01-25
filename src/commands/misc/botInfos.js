@@ -5,7 +5,13 @@ const packageJSON = require("../../../package.json");
 class BotInfosCommand extends Command{
     constructor(){
         super('botinfos', {
-            aliases: ['botinfos']
+            aliases: ['botinfos'],
+            category: 'Misc',
+            description: {
+                content: "La commande botinfos renvoi des informations sur le bot",
+                usage: 'botinfos',
+                examples: ['botinfos']
+            }
         })
     }
 

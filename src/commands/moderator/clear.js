@@ -7,7 +7,13 @@ class LockdownCommand extends Command{
             userPermissions: "MANAGE_MESSAGES",
             args: [{
                 id: "numberClear", type: "number", match: 'content'
-            }]
+            }],
+            category: 'Moderation',
+            description: {
+                content: "La commande clear supprime un certain nombre de message dans un salon",
+                usage: 'clear <nombre de messages>',
+                examples: ['clear 100']
+            }
         })
     }
 

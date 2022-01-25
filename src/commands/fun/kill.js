@@ -4,7 +4,13 @@ const Discord = require('discord.js');
 class KillCommand extends Command {
     constructor() {
         super('kill', {
-            aliases: ['meurtre', 'kill', 'tuer']
+            aliases: ['kill'],
+            category: 'Fun',
+            description: {
+                content: "La commande kill permet de tuer quelqu'un (Hmm...)",
+                usage: 'kill <membre>',
+                examples: ['kill @Patou']
+            }
         });
     }
        

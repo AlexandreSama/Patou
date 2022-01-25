@@ -3,8 +3,14 @@ const {Command} = require('discord-akairo')
 class IntraServerCommand extends Command{
     constructor(){
         super('intraserver', {
-            aliases: ['it', 'intraserver'],
-            userPermissions: 'ADMINISTRATOR'
+            aliases: ['intraserver', 'it'],
+            userPermissions: 'ADMINISTRATOR',
+            category: 'Support',
+            description: {
+                content: "La commande intraserver permet d'ouvrir un ticket entre le/les propriétaire(s) d'un serveur et mes créateurs sans avoir besoin de rejoindre leur discord",
+                usage: 'intraserver',
+                examples: ['intraserver']
+            }
         })
     }
 

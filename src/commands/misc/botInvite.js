@@ -4,7 +4,13 @@ const Discord = require('discord.js');
 class BotInviteCommand extends Command{
     constructor(){
         super('botinvite', {
-            aliases: ['botinvite']
+            aliases: ['botinvite'],
+            category: 'Misc',
+            description: {
+                content: "La commande botinvite renvoi une invitation pour faire rejoindre le bot sur votre serveur",
+                usage: 'botinvite',
+                examples: ['botinvite']
+            }
         })
     }
 

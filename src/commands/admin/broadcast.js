@@ -4,7 +4,13 @@ class BroadcastCommand extends Command{
     constructor(){
         super('broadcast', {
             aliases: ['broadcast', 'bc'],
-            ownerOnly: true
+            ownerOnly: true,
+            category: 'Administration/Owner',
+            description: {
+                content: "La commande broadcast permet a mes créateurs de partager des annonces sur chaque serveur",
+                usage: 'broadcast <annonce>',
+                examples: ['broadcast Je suis beau !']
+            }
         })
     }
 

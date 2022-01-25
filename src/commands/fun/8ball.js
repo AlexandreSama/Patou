@@ -9,7 +9,13 @@ class HeigthBallCommand extends Command{
                 {
                     id: "question", match: 'content'
                 }
-            ]
+            ],
+            category: 'Fun',
+            description: {
+                content: "La commande 8ball permet de poser une question au bot (Attention, mes réponses ne sont pas toujours les plus sympathiques !)",
+                usage: '8ball <question>',
+                examples: ['8ball Est-ce que je suis le meilleur ?']
+            }
         });
     }
 

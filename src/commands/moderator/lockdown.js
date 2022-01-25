@@ -3,8 +3,14 @@ const {Command} = require('discord-akairo')
 class LockdownCommand extends Command{
     constructor(){
         super('lockdown', {
-            aliases: ['ld', 'lockdown'],
-            userPermissions: "MANAGE_MESSAGES"
+            aliases: ['lock'],
+            userPermissions: "MANAGE_MESSAGES",
+            category: 'Moderation',
+            description: {
+                content: "La commande lock permet de fermer un salon aux utilisateurs",
+                usage: 'lock',
+                examples: ['lock']
+            }
         })
     }
 

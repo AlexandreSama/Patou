@@ -4,7 +4,13 @@ const Discord = require('discord.js');
 class HugCommand extends Command{
     constructor(){
         super('hug', {
-            aliases: ['hug']
+            aliases: ['hug'],
+            category: 'Fun',
+            description: {
+                content: "La commande hug permet de réconforter quelqu'un (soooo cute !)",
+                usage: 'hug <membre>',
+                examples: ['hug @Patou']
+            }
         });
     }
        

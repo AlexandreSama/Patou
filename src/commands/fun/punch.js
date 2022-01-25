@@ -4,7 +4,13 @@ const Discord = require('discord.js');
 class PunchCommand extends Command {
     constructor() {
         super('punch', {
-            aliases: ['punch']
+            aliases: ['punch'],
+            category: 'Fun',
+            description: {
+                content: "La commande punch permet de frapper quelqu'un (sadique :eyes:)",
+                usage: 'punch <membre>',
+                examples: ['punch @Patou']
+            }
         });
     }
        
