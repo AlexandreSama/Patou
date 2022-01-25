@@ -5,7 +5,8 @@ const config = require('../../util/config.json')
 class ConfigCommand extends Command{
     constructor(){
         super('config', {
-            aliases: ['configuration', 'config']
+            aliases: ['configuration', 'config'],
+            userPermissions: "ADMINISTRATOR",
         })
     }
 

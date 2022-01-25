@@ -3,7 +3,8 @@ const {Command} = require('discord-akairo')
 class IntraServerCommand extends Command{
     constructor(){
         super('intraserver', {
-            aliases: ['it', 'intraserver']
+            aliases: ['it', 'intraserver'],
+            userPermissions: 'ADMINISTRATOR'
         })
     }
 
@@ -38,6 +39,8 @@ class IntraServerCommand extends Command{
         setInterval(function(){
             let firstChannelNewMessage = firstServer.channels.cache.find(c => c.name == "ticket-de-" + secondServer.id && c.type == "GUILD_TEXT").lastMessage
             let secondChannelNewMessage = secondServer.channels.cache.find(c => c.name == "ticket-ouvert" && c.type == "GUILD_TEXT").lastMessage
+            let firstChannel = firstServer.channels.cache.find(c => c.name == "ticket-de-" + secondServer.id && c.type == "GUILD_TEXT")
+            let secondChannel = secondServer.channels.cache.find(c => c.name == "ticket-ouvert" && c.type == "GUILD_TEXT")
 
             if(firstChannelNewMessage.content == firstChannelLastMessage || firstChannelNewMessage.author.bot == true || firstChannelNewMessage.content == null){
 
@@ -51,6 +54,13 @@ class IntraServerCommand extends Command{
             }else{
                 firstServer.channels.cache.find(c => c.name == "ticket-de-" + secondServer.id).send("**" + secondChannelNewMessage.author.username + "**" + " : *" + secondChannelNewMessage.content + "*")
                 secondChannelLastMessage = secondChannelNewMessage.content
+            }
+
+            if(firstChannelNewMessage.content.toLowerCase() === "fin de transmission"){
+                firstChannel.delete("Fin de transmission avec le serveur").then(res => {
+                    message.author.send("Fin de transmission avec mes créateurs, bonne journée/soirée !")
+                    secondChannel.delete('Fin de transmission avec mes créateurs !')
+                })
             }
         }, 5000)
     }
