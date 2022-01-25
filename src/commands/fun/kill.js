@@ -31,7 +31,7 @@ class KillCommand extends Command {
             let gif = rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
             let lien =  new Discord.MessageEmbed()
             .setColor('#6100FF')
-            .setTitle(message.author.username + "   frappe   " + member.user.username)
+            .setTitle(message.author.username + "   a tué   " + member.user.username)
             .setAuthor(message.author.username, message.author.displayAvatarURL({dynamic : true}))
             .setImage(gif)
             .setTimestamp()  
