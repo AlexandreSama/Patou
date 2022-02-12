@@ -21,8 +21,6 @@ class IntraServerCommand extends Command{
 
         let firstChannelLastMessage
         let secondChannelLastMessage
-        let firstChannelNewMessage
-        let secondChannelMessageMessage
 
         firstServer.channels.create("ticket-de-" + secondServer.id).then(channel => {
             let category = firstServer.channels.cache.find(c => c.name == "intra-server" && c.type == "GUILD_CATEGORY")
